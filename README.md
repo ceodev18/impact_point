@@ -18,7 +18,7 @@ docker-compose up --build
 
 ### 🔹 Import Pokémon
 
-Make a `POST` request to `/import` with a JSON payload:
+Make a `POST` request to `/api/import` with a JSON payload:
 
 ```json
 {
@@ -28,7 +28,7 @@ Make a `POST` request to `/import` with a JSON payload:
 
 ### 🔹 List Stored Pokémon
 
-Make a `GET` request to `/pokemons`:
+Make a `GET` request to `/api/pokemons`:
 
 ```bash
 curl http://localhost:5000/pokemons
@@ -43,7 +43,7 @@ This returns all stored Pokémon in JSON format.
 You can either:
 
 - Edit the default list in `utils.py`
-- Or pass names directly in the JSON payload when calling `/import`
+- Or pass names directly in the JSON payload when calling `/api/import`
 
 ---
 

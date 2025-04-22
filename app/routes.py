@@ -4,7 +4,7 @@ from flasgger import swag_from
 
 bp = Blueprint("api", __name__)
 
-@bp.route("/import", methods=["POST"])
+@bp.route("/api/import", methods=["POST"])
 @swag_from({
     'tags': ['Pokémon'],
     'description': 'Import Pokémon data by names',
@@ -34,7 +34,7 @@ def import_pokemon():
     names = request.json.get("names") if request.is_json else None
     return jsonify(import_pokemons(names))
 
-@bp.route("/pokemons", methods=["GET"])
+@bp.route("/api/pokemons", methods=["GET"])
 @swag_from({
     'tags': ['Pokémon'],
     'description': 'List all stored Pokémon',
